@@ -2,14 +2,14 @@
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Core_Proje.ViewComponents.Service
+namespace Core_Proje.ViewComponents.Portfolio
 {
-    public class ServiceList:ViewComponent
+    public class PortfolioList:ViewComponent
     {
-        ServiceManager sm = new ServiceManager(new EfServiceDal());
+        PortfolioManager pm = new PortfolioManager(new EfPortfolioDal());
         public IViewComponentResult Invoke()
         {
-            var values = sm.TGetList();
+            var values = pm.TGetList();
             return View(values);
         }
     }

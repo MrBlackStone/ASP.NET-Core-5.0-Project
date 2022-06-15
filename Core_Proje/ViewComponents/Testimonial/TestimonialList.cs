@@ -2,14 +2,14 @@
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Core_Proje.ViewComponents.Service
+namespace Core_Proje.ViewComponents.Testimonial
 {
-    public class ServiceList:ViewComponent
+    public class TestimonialList:ViewComponent
     {
-        ServiceManager sm = new ServiceManager(new EfServiceDal());
+        TestimonialManager tm = new TestimonialManager(new EfTestimonialDal());
         public IViewComponentResult Invoke()
         {
-            var values = sm.TGetList();
+            var values  = tm.TGetList();
             return View(values);
         }
     }

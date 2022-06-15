@@ -2,14 +2,14 @@
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Core_Proje.ViewComponents.Service
+namespace Core_Proje.ViewComponents.Experience
 {
-    public class ServiceList:ViewComponent
+    public class ExperienceList:ViewComponent
     {
-        ServiceManager sm = new ServiceManager(new EfServiceDal());
+        ExperienceManager em = new ExperienceManager(new EfExperienceDal());
         public IViewComponentResult Invoke()
         {
-            var values = sm.TGetList();
+            var values = em.TGetList();
             return View(values);
         }
     }

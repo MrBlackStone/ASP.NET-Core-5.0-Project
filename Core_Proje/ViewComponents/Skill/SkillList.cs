@@ -2,11 +2,11 @@
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Core_Proje.ViewComponents.Service
+namespace Core_Proje.ViewComponents.Skill
 {
-    public class ServiceList:ViewComponent
+    public class SkillList:ViewComponent
     {
-        ServiceManager sm = new ServiceManager(new EfServiceDal());
+        SkillManager sm = new SkillManager(new EfSkillDal());
         public IViewComponentResult Invoke()
         {
             var values = sm.TGetList();
