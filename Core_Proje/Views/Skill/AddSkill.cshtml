@@ -4,9 +4,9 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>AddSkill</h1>
-
-<form class="form-group" method="post" >
+<div class="card-header border-0">
+    <h3 class="mb-0">Yetenek Ekleme Sayfası</h3>
+    <form class="form-group" method="post" >
     <br />
     @Html.Label("Yetenek Başlığı")
     <input type="text" name="Title" class="form-control"/>
@@ -16,4 +16,6 @@
     <br />
     <button  class="btn btn-primary">Kaydet</button>
 </form>
+</div>
+
 
